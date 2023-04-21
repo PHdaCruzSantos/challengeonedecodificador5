@@ -108,7 +108,8 @@ body{
   margin-right: 5px;
 }
 .main-content-buttons .btn,
-.aside .btn {
+.aside .btn,
+.botton-side .btn {
   width: 330px;
   height: 64px;
   border-radius: 24px;
@@ -129,7 +130,8 @@ body{
 }
 
 .main-content-buttons .btn--primary,
-.aside .btn--primary {
+.aside .btn--primary,
+.botton-side .btn--primary {
   background-color: var(--dark-blue-300);
   color: var(--light-blue-100);
   border: 1px solid transparent;
@@ -184,4 +186,98 @@ body{
   width: 3px;
   border-radius: 10px;
   background-color: var(--dark-blue-200);
+}
+
+.botton-side {
+  display: none;
+}
+
+@media screen and (max-width: 1385px) {
+  .main-content{
+    width: 750px;
+  }
+
+  .main-content-buttons .btn {
+    width: 250px;
+  }
+
+  .aside {
+    width: 300px;
+  }
+  .aside .btn {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .main-content{
+    width: 650px;
+  }
+
+  .main-content-buttons .btn {
+    width: 225px;
+  }
+
+  .aside {
+    width: 250px;
+  }
+  .aside .btn {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .main-content{
+    width: 500px;
+  }
+
+  .main-content-buttons{
+    margin-left: 150px;
+  }
+  .main-content-buttons .btn {
+    width: 180px;
+    font-size: medium;
+  }
+  .aside .btn {
+    width: 150px;
+  }
+}
+  
+@media screen and (max-width: 910px) { 
+  
+  .nav a {
+    display: none;
+  }
+  
+  .aside {
+    display: none;
+  }
+  .main-content{
+    width: clamp(500px,90vw ,700px);
+    margin: 0 auto;
+  }
+  .main-content-buttons .btn {
+    width: 250px;
+    font-size: large;
+  }
+
+  .botton-side{
+    height: 200px;
+    width: clamp(200px,90vw ,700px);
+    margin: 0 auto;
+    border-radius: 32px;
+    box-shadow: var(--drop-sahdow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: large;
+  }
+
+  .botton-side .btn{
+    width: 150px;
+  }
+
 }
